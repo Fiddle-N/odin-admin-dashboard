@@ -1,6 +1,62 @@
-.sidebar {
-    background-color: #1992d4;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 19rem 1fr;
+    grid-template-rows: 1fr 4fr
+}
+
+.sidebar {
+    background-color: #0284c7;
+    color: white;
+    grid-row: 1 / -1;
+    padding-bottom: 2em;
+}
+
+.sidebar__title-container {
+    margin-bottom: 1.8rem;
+}
+
+.sidebar__options {
+    display: grid;
+}
+
+.sidebar__primary-options {
+    margin-bottom: 3em;
+}
+
+.sidebar__title, .sidebar__option {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+}
+
+.sidebar__option {
+    padding: 0.8rem 1.7rem;
+    gap: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.sidebar__title:hover, .sidebar__option:hover {
+    background-color: #0369a1;
+}
+
+.sidebar__title {
+    gap: 0.8rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+
 
 .main-content {
     background-color: #e2e8f0;
