@@ -1,3 +1,12 @@
+:root {
+    --main-colour: #0369a1;
+    --accent-colour: #075985
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -9,16 +18,18 @@ a {
 }
 
 .container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 19rem 1fr;
-    grid-template-rows: 1fr 4fr
+    grid-template-rows: 11rem 1fr;
 }
 
 .sidebar {
-    background-color: #0284c7;
+    background-color: var(--main-colour);
     color: white;
     grid-row: 1 / -1;
     padding-bottom: 2em;
+    /* TODO add shadow */
 }
 
 .sidebar__title-container {
@@ -47,7 +58,7 @@ a {
 }
 
 .sidebar__title:hover, .sidebar__option:hover {
-    background-color: #0369a1;
+    background-color: var(--accent-colour);
 }
 
 .sidebar__title {
@@ -56,7 +67,113 @@ a {
     font-weight: 700;
 }
 
+.header {
+    display: grid;
+    align-items: center;
+    padding: 0.75rem 2.8rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.15fr;
+}
 
+.header__search, .header__search-label {
+    display: flex;
+}
+
+.header__search {
+    justify-self: start;
+    gap: 1rem;
+}
+
+.header__search-box {
+    border: none;
+    background-color: #e2e8f0;
+    height: 2rem;
+    width: 68ch;
+    border-radius: 0.9rem;
+    padding-left: 1.5ch;
+    padding-right: 1ch;
+    font-size: 1rem;
+}
+
+.header__search-box:focus {
+    outline: none;
+    outline: 2px solid #94a3b8;
+}
+
+.header__search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
+    content: url("images/close.svg");
+}
+
+.header__profile {
+    justify-self: end;
+    display: flex;
+    gap: 1.9em;
+    align-items: center;
+}
+
+.header__profile-pic {
+    border-radius: 25px;
+}
+
+.header__profile-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.header__greeting,
+.header__greeting-profile-link {
+    display: flex;
+    align-items: center;
+}
+
+.header__greeting {
+    gap: 1.5em;
+}
+
+.header__greeting-profile-pic {
+    border-radius: 35px;
+}
+
+.header__greeting-text {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.header__greeting-intro {
+    font-size: 0.87rem;
+}
+
+.header__greeting-name {
+    font-size: 1.5rem;
+}
+
+.header__actions {
+    justify-self: end;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.6rem;
+}
+
+.header__button {
+    border: none;
+    cursor: pointer;
+    background-color: var(--main-colour);
+    color: white;
+    height: 2.5rem;
+    width: 6.5rem;
+    border-radius: 1.25rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.header__button:hover {
+    background-color: var(--accent-colour);
+}
 
 .main-content {
     background-color: #e2e8f0;
