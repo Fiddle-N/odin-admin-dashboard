@@ -17,6 +17,16 @@ a {
     color: inherit;
 }
 
+h1 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     height: 100vh;
     display: grid;
@@ -44,20 +54,20 @@ a {
     margin-bottom: 3em;
 }
 
-.sidebar__title, .sidebar__option {
+.sidebar__title, .sidebar__link {
     display: flex;
     align-items: center;
     padding: 0.8rem 1rem;
 }
 
-.sidebar__option {
+.sidebar__link {
     padding: 0.8rem 1.7rem;
     gap: 1.4rem;
     font-size: 1.3rem;
     font-weight: 700;
 }
 
-.sidebar__title:hover, .sidebar__option:hover {
+.sidebar__title:hover, .sidebar__link:hover {
     background-color: var(--accent-colour);
 }
 
